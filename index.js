@@ -1,7 +1,6 @@
 var server_port = 65432;
 var server_addr = "192.168.137.141";   // the IP address of your Raspberry PI
 
-document.onkeydown = updateKey;
 document.onload = send_data("page loaded");
 
 function client(){
@@ -47,10 +46,6 @@ function send_data(msg){
         const obj = JSON.parse(data.toString());
         console.log(obj);
         insert(obj.timestamp, obj.name);
-        // document.getElementById("cpu_temperature").innerHTML = obj.cpu_temperature;
-        // document.getElementById("gpu_temperature").innerHTML = obj.gpu_temperature;
-        // document.getElementById("battery").innerHTML = obj.battery;
-        // document.getElementById("direction").innerHTML = obj.car_direction;
 
         // client.end();
         // client.destroy();
@@ -72,33 +67,4 @@ function insert(timestamp, name) {
     cell2.innerHTML = name;
 }
 
-// function updateKey(e) {
-//     e = e || window.event;
-
-//     if (e.keyCode == '87') {
-//         // up (w)
-//         console.log("up");
-//         document.getElementById("upArrow").style.color = "green";
-//         insert("current time", "Kaylin")
-//     }
-//     else if (e.keyCode == '83') {
-//         // down (s)
-//         console.log("down");
-//         document.getElementById("downArrow").style.color = "green";
-//         send_data("backward");
-
-//     }
-//     else if (e.keyCode == '65') {
-//         // left (a)
-//         console.log("left");
-//         document.getElementById("leftArrow").style.color = "green";
-//         send_data("left");
-
-//     }
-//     else if (e.keyCode == '68') {
-//         // right (d)
-//         document.getElementById("rightArrow").style.color = "green";
-//         send_data("right");
-//     }
-// }
 
