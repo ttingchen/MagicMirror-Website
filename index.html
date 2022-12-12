@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <style>
+      .container{
+                  display: flex;
+                }
+      #timeTable {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      #timeTable td, #timeTable th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+
+      #timeTable tr:nth-child(even){background-color: #f2f2f2;}
+
+      #timeTable tr:hover {background-color: #ddd;}
+
+      #timeTable th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #04aa9f;
+        color: white;
+      }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./index.js"></script>
+    
+  </head>
+
+  <body>
+    <div class="container">
+  
+      <div class="jumbotron">
+        <h2>Entrance Log</h2>
+      
+        <!-- <img src="./media/default_background.png" id='pics'> -->
+      </div> 
+    
+    </div>
+
+    <div class="container">
+      <table id="timeTable">
+        <tr>
+          <th>Time</th>
+          <th>Name</th>
+        </tr>
+      </table>
+    </div>
+    <br>
+
+  </body>
+</html>
+
